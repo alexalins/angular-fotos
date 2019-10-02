@@ -9,7 +9,7 @@ Site simples com uma galeria de imagem.
 Para rodar a [API](https://s3.amazonaws.com/caelum-online-public/865-angular/api.zip):
 * Instalar o sqlite3 `npm install sqlite3`;
 * Instalar dependências `npm install`;
-* Rodar servidor `npm start`
+* Rodar servidor `npm start`.
 
 ### Server
 
