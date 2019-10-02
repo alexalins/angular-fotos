@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-foto',
@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FotoComponent implements OnInit {
 
-  description = 'Leão';
-  url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sultan_the_Barbary_Lion.jpg/440px-Sultan_the_Barbary_Lion.jpg';
+  @Input() description: string = '';
+  @Input() url: string = '';
 
   constructor() { }
 
