@@ -5,8 +5,8 @@ import { FotoFormComponent } from './pages/foto-form/foto-form.component';
 import { NotFoundComponent } from './erros/not-found/not-found.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'user/padrao', pathMatch: 'full'},
-  {path: 'user/padrao', component: FotoListComponent},
+  {path: '', redirectTo: 'user/:userName', pathMatch: 'full'},
+  {path: 'user/:userName', component: FotoListComponent},
   {path: 'foto/add', component: FotoFormComponent},
   {path: '**', component: NotFoundComponent},
 ];

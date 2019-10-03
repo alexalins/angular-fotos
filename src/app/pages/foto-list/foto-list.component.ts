@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Photo } from 'src/app/models/photo';
 import { ApiService } from 'src/app/services/api.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-foto-list',
@@ -9,16 +10,21 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class FotoListComponent implements OnInit {
 
-  photos: Photo [] = [];
+  photos: Photo[] = [];
 
-  constructor(private apiService: ApiService) {}
+  constructor(
+    private apiService: ApiService,
+    private activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit() {
     this.getPhotos();
   }
 
   getPhotos() {
-    this.apiService.getPhotos('flavio').subscribe(
+    const userName = this.activatedRoute.snapshot.params.userName;
+    //
+    this.apiService.getPhotos(userName).subscribe(
       res => this.photos = res,
       error => console.error()
     );
