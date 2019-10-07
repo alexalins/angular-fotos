@@ -11,7 +11,7 @@ import { ComponentesModule } from './../../shared/componentes/componentes.module
   ],
   imports: [
     CommonModule,
-    ComponentesModule
+    ComponentesModule,
   ],
   exports: [FotoListComponent]
 })

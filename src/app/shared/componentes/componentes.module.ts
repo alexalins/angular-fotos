@@ -5,6 +5,7 @@ import { ListaComponent } from './lista/lista.component';
 import { LoadButtonComponent } from './load-button/load-button.component';
 import { SearchComponent } from './search/search.component';
 import { CardComponent } from './card/card.component';
+import { DarkenOnHoverModule } from '../directives/darken-on-hover/darken-on-hover.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { CardComponent } from './card/card.component';
     CardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    
+    DarkenOnHoverModule
   ],
   exports: [
     FotoComponent,
