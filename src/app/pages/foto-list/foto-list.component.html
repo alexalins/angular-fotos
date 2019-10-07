@@ -1,3 +1,4 @@
-<search (keyup)="search = $event.target.value"></search>
+<search (keyup)="debounce.next(search = $event.target.value)"></search>
 
 <lista [photos]="photos | filterByDescription: search"></lista>
+<load-button (click)="load()" [hasMore]="hasMore"></load-button>
