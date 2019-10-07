@@ -4,13 +4,15 @@ import { FotoComponent } from './foto/foto.component';
 import { ListaComponent } from './lista/lista.component';
 import { LoadButtonComponent } from './load-button/load-button.component';
 import { SearchComponent } from './search/search.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     FotoComponent,
     ListaComponent,
     LoadButtonComponent,
-    SearchComponent
+    SearchComponent,
+    CardComponent
   ],
   imports: [
     CommonModule
@@ -19,7 +21,8 @@ import { SearchComponent } from './search/search.component';
     FotoComponent,
     ListaComponent,
     LoadButtonComponent,
-    SearchComponent
+    SearchComponent,
+    CardComponent
   ]
 })
 export class ComponentesModule { }
