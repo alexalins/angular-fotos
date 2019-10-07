@@ -1,1 +1,3 @@
-<lista [photos]="photos"></lista>
+<search (keyup)="search = $event.target.value"></search>
+
+<lista [photos]="photos | filterByDescription: search"></lista>

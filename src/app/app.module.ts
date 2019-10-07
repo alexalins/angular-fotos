@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PagesModule } from './pages/pages.module';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrosModule } from './erros/erros.module';
+import { FilterByDescriptionPipe } from './pipes/filter-by-description.pipe';
 
 @NgModule({
   declarations: [
