@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Photo } from 'src/app/models/photo';
 import { ActivatedRoute } from '@angular/router';
-import { Subject, of } from 'rxjs';
+import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 import { ApiService } from 'src/app/services/api.service';
 
