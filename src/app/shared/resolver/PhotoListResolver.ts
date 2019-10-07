@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { ApiService } from '../services/api.service';
-import { Photo } from '../models/photo';
+import { Photo } from 'src/app/models/photo';
 
 @Injectable({ providedIn: 'root' })
 export class PhotoListResolver implements Resolve<Observable<Photo[]>> {

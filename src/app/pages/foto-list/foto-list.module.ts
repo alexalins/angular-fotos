@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FilterByDescriptionPipe } from 'src/app/pipes/filter-by-description.pipe';
-import { ComponentesModule } from 'src/app/componentes/componentes.module';
 import { FotoListComponent } from './foto-list.component';
+import { FilterByDescriptionPipe } from './../../shared/pipes/filter-by-description.pipe';
+import { ComponentesModule } from './../../shared/componentes/componentes.module';
 
 @NgModule({
   declarations: [

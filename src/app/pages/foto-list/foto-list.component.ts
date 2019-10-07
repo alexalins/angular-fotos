@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Photo } from 'src/app/models/photo';
 import { ActivatedRoute } from '@angular/router';
-import { ApiService } from 'src/app/services/api.service';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-foto-list',

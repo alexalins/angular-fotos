@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse, HttpParams } from '@angular/common/http';
-import { Photo } from '../models/photo';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Photo } from 'src/app/models/photo';
 
 const base_url = 'http://localhost:3000/';
 
