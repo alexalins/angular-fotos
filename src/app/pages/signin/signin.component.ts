@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -10,12 +11,15 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 export class SigninComponent implements OnInit {
 
   loginForm: FormGroup;
+  @ViewChild('usernameInput', {static: false}) usernameInput: ElementRef<HTMLInputElement>;
 
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService) { }
+    private authService: AuthService,
+    private router: Router
+  ) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -27,14 +31,15 @@ export class SigninComponent implements OnInit {
     const password = this.loginForm.get('password').value;
 
     this.authService
-        .authenticate(username, password)
-        .subscribe(
-            () => console.log('autenticado'),
-            err => {
-                console.log(err);
-                alert('Invalid user name or password');
-                this.loginForm.reset();
-            }
-        );
+      .authenticate(username, password)
+      .subscribe(
+        () => this.router.navigate(['user', username]),
+        err => {
+          console.log(err);
+          alert('Invalid user name or password');
+          this.usernameInput.nativeElement.focus();
+          this.loginForm.reset();
+        }
+      );
   }
 }

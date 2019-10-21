@@ -4,15 +4,17 @@
         <form class="form mt-4" [formGroup]="loginForm" (submit)="login()">
             <div class="row">
                 <div class="form-group col-sm-8 mx-auto">
-                    <input formControlName="username" name="username" class="form-control" placeholder="Username"
-                        autofocus>
-                    <app-vmessage *ngIf="loginForm.get('username').errors?.required" text="User name is required!"></app-vmessage>
+                    <input #usernameInput formControlName="username" name="username" class="form-control"
+                        placeholder="Username" autofocus>
+                    <app-vmessage *ngIf="loginForm.get('username').errors?.required" text="User name is required!">
+                    </app-vmessage>
                 </div>
 
                 <div class="form-group col-sm-8 mx-auto">
                     <input formControlName="password" name="password" type="password" class="form-control"
                         placeholder="Password">
-                    <app-vmessage *ngIf="loginForm.get('password').errors?.required" text=" Password is required!"></app-vmessage>
+                    <app-vmessage *ngIf="loginForm.get('password').errors?.required" text=" Password is required!">
+                    </app-vmessage>
 
                 </div>
 
