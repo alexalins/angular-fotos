@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PagesModule } from './pages/pages.module';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrosModule } from './erros/erros.module';
+import { ComponentesModule } from './shared/componentes/componentes.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ErrosModule } from './erros/erros.module';
     HttpClientModule,
     AppRoutingModule,
     PagesModule,
-    ErrosModule
+    ErrosModule,
+    ComponentesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

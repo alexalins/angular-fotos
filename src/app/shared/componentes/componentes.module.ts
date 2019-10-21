@@ -7,6 +7,7 @@ import { SearchComponent } from './search/search.component';
 import { CardComponent } from './card/card.component';
 import { DarkenOnHoverModule } from '../directives/darken-on-hover/darken-on-hover.module';
 import { VmessageComponent } from './vmessage/vmessage.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { VmessageComponent } from './vmessage/vmessage.component';
     LoadButtonComponent,
     SearchComponent,
     CardComponent,
-    VmessageComponent
+    VmessageComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { VmessageComponent } from './vmessage/vmessage.component';
     LoadButtonComponent,
     SearchComponent,
     CardComponent,
-    VmessageComponent
+    VmessageComponent,
+    HeaderComponent
   ]
 })
 export class ComponentesModule { }
