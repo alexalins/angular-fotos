@@ -1,19 +1,22 @@
 <div class="card text-center w-50 bg-secondary mx-auto" align="center">
     <div class="card-body">
         <h5 class="card-title aling-center">LOGIN</h5>
-        <form class="form mt-4" [formGroup]="loginForm">
+        <form class="form mt-4" [formGroup]="loginForm" (submit)="login()">
             <div class="row">
                 <div class="form-group col-sm-8 mx-auto">
                     <input formControlName="username" name="username" class="form-control" placeholder="Username"
                         autofocus>
+                    <app-vmessage *ngIf="loginForm.get('username').errors?.required" text="User name is required!"></app-vmessage>
                 </div>
 
                 <div class="form-group col-sm-8 mx-auto">
                     <input formControlName="password" name="password" type="password" class="form-control"
                         placeholder="Password">
+                    <app-vmessage *ngIf="loginForm.get('password').errors?.required" text=" Password is required!"></app-vmessage>
+
                 </div>
 
-                <button type="submit" class="btn btn-success btn-block col-sm-6 mx-auto">
+                <button type="submit" class="btn btn-success btn-block col-sm-6 mx-auto" [disabled]="loginForm.invalid">
                     LOGIN
                 </button>
             </div>

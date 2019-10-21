@@ -6,6 +6,7 @@ import { LoadButtonComponent } from './load-button/load-button.component';
 import { SearchComponent } from './search/search.component';
 import { CardComponent } from './card/card.component';
 import { DarkenOnHoverModule } from '../directives/darken-on-hover/darken-on-hover.module';
+import { VmessageComponent } from './vmessage/vmessage.component';
 
 @NgModule({
   declarations: [
@@ -13,11 +14,11 @@ import { DarkenOnHoverModule } from '../directives/darken-on-hover/darken-on-hov
     ListaComponent,
     LoadButtonComponent,
     SearchComponent,
-    CardComponent
+    CardComponent,
+    VmessageComponent
   ],
   imports: [
     CommonModule,
-    
     DarkenOnHoverModule
   ],
   exports: [
@@ -25,7 +26,8 @@ import { DarkenOnHoverModule } from '../directives/darken-on-hover/darken-on-hov
     ListaComponent,
     LoadButtonComponent,
     SearchComponent,
-    CardComponent
+    CardComponent,
+    VmessageComponent
   ]
 })
 export class ComponentesModule { }
