@@ -8,6 +8,7 @@ import { CardComponent } from './card/card.component';
 import { DarkenOnHoverModule } from '../directives/darken-on-hover/darken-on-hover.module';
 import { VmessageComponent } from './vmessage/vmessage.component';
 import { HeaderComponent } from './header/header.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     CommonModule,
-    DarkenOnHoverModule
+    DarkenOnHoverModule,
+    RouterModule
   ],
   exports: [
     FotoComponent,
