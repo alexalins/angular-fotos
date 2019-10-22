@@ -9,6 +9,7 @@ import { DarkenOnHoverModule } from '../directives/darken-on-hover/darken-on-hov
 import { VmessageComponent } from './vmessage/vmessage.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
+import { CardGrayComponent } from './card-gray/card-gray.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,13 @@ import { RouterModule } from '@angular/router';
     SearchComponent,
     CardComponent,
     VmessageComponent,
-    HeaderComponent
+    HeaderComponent,
+    CardGrayComponent
   ],
   imports: [
+    RouterModule,
     CommonModule,
     DarkenOnHoverModule,
-    RouterModule
   ],
   exports: [
     FotoComponent,
@@ -32,7 +34,8 @@ import { RouterModule } from '@angular/router';
     SearchComponent,
     CardComponent,
     VmessageComponent,
-    HeaderComponent
+    HeaderComponent,
+    CardGrayComponent
   ]
 })
 export class ComponentesModule { }

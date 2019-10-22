@@ -1,6 +1,4 @@
-<div class="card text-center w-50 bg-secondary mx-auto" align="center">
-    <div class="card-body">
-        <h5 class="card-title aling-center">LOGIN</h5>
+<card-gray title="LOGIN">
         <form class="form mt-4" [formGroup]="loginForm" (submit)="login()">
             <div class="row">
                 <div class="form-group col-sm-8 mx-auto">
@@ -24,6 +22,5 @@
             </div>
 
         </form>
-        <p>Not a user?<a> Register now</a></p>
-    </div>
-</div>
+        <p>Not a user?<a [routerLink]="['/signup']"> Register now</a></p>
+    </card-gray>
